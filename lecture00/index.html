@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!-- the index is like the "view" -->
+<!-- ng-app -> tag that is bound with the angularjs and now is responsible for -->
+<html lang="en" ng-app="MyFirstApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- this "piece of view" is being bound in the "controller" in app.js -->
+    <h1>My first Angular app!</h1>
+    <div ng-controller="MyFirstController">
+        <!-- name is sitting on the scoope in the controller -->
+        <!--I want the input attribute to always be equal to "name"  in the scope-->
+        <input type="text" ng-model="name">
+        Inside my Input is {{name}}
+    </div>
+
+</body>
+</html>

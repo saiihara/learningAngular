@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>how does the bouding work? How does angular find the attribute?</h1>
+    <h2>HTML5 Custom attributes</h2>
+    <h3>Like this!</h3>
+
+    <div id="target" greeting="hello" ng-app="MyTestApp">
+        <section>
+            <p>Section 1</p>
+            <article>
+               <p>Article 1</p>
+            </article>
+        </section>
+    </div>
+
+    <script>
+        var elem = document.getElementById("target");
+        // the whole section and article altogether
+        console.log(elem);
+        console.log(elem.getAttribute("greeting"));
+        console.log(elem.getAttribute("ng-app"));
+
+        //find me the first element with the ng-app attribute
+        var elem2 = document.querySelector("[ng-app]");
+        console.log(elem2);
+        console.log(elem2.getAttribute("ng-app"));
+
+    </script>
+</body>
+</html>

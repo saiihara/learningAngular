@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Document</title>
+</head>
+<!-- Now namecalculator is controlling the whole body tag -->
+<body ng-app="NameCalculator">
+    <div ng-controller="NameCalculatorController">
+        <div>
+            Your name:
+            <!-- as the name changes, the name in our scope will change as well -->
+            <!-- when the user presses a key = keyup -->
+            <input type="text"
+            ng-model="name"
+            ng-keyup="displayNumeric();"             
+            >
+        </div>
+        <div>Total numeric value of person's name is: {{totalValue}}</div>
+    </div>
+</body>
+</html>
