@@ -1,4 +1,4 @@
-<h1>Learnig AngularJS</h1>
+<h1>Learning AngularJS</h1>
 This is my journey of learning AngularJS step by step <br>
 <h3>Self taught!</h3>
 <br>
