@@ -1,0 +1,25 @@
+Dependency injection:
+Design pattern that implements inversion of control for resolving independencies
+
+Minification:
+Process or removing all unnecessary characters from source code without changing its functionality, making it undereable, cutting out white spaces, curly braces, comas, etc.
+Purpose: Reduces the amount of fata transferred to the server
+ - Dependency injection in Angular need sto be minification proof 
+ - attach $inject property to the function object
+
+ Expressions:
+ Something to evaluates (or turns into) to some value {{value}}
+ - Processed by Angular that are tied to the scope they are in
+ - Excecuted in the context of the scope and has access to properties on $scope
+ - Doesnt throw errors
+ - Control flow functions are not allowed (e.g if)
+ - Accept a filer of a filter chain to format the output
+
+ Interpolation
+ Process for evaluating a string literal conraining one or more placeholders which are replaced with values.
+ - Message is {{message}}
+ - These placeholders are usually expressions
+ - provided message "hello" is interpolated into this string: message is hello
+ - This is still connected to the original message property
+ - Result is automatically updated when placeholder value changes
+  

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MsgApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+
+    <h1>Expressions and interpolation</h1>
+
+    <div ng-controller="MsgController">
+        {{name}} has a message for you: <br> <!-- {{name}} --> {{sayMessage()}}
+
+        <!-- //this shows no error, just an empty string  -->
+        <!-- {{dsadsa}} -->
+
+        <div>
+            <!-- //we want an image to be displayed that when we click the button it does something magic! -->
+            <button ng-click="sadCat()">What will happen if you click?</button>
+            <br>
+
+            <!-- //we interpolate the url -->
+            <!-- we will still get an error 404 not found
+                => HTML gets prosecced sequentially and line by line, and at the time it reaches the img the image has not been defined yet
+                we need to tell angular to fetch it only when angular is ready for interpretation of these placeholders, using ng-src -->
+
+            <img  ng-src="images/bananaCat_{{stateOfBeing}}.jpg">
+           
+        </div>
+
+
+    </div>
+
+
+</body>
+</html>
