@@ -23,3 +23,15 @@ Purpose: Reduces the amount of fata transferred to the server
  - This is still connected to the original message property
  - Result is automatically updated when placeholder value changes
   
+
+Filters
+Changes the output of an expression 
+{{"Hello | uppercase}} -> HTML
+{{"Hello" | currency: arg1 : arg2}}
+
+Our own filters:
+We need to define the filtering factory function 
+register filter factory with module
+inject it with nameFilter
+
+{{"Hello" | custom | uppearcase |currency: arg1 : arg2}}
