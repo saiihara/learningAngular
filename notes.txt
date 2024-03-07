@@ -35,3 +35,11 @@ register filter factory with module
 inject it with nameFilter
 
 {{"Hello" | custom | uppearcase |currency: arg1 : arg2}}
+
+
+Digest cycle and watchers
+
+$digest and $apply
+ - For code that is not Angular
+ 
+

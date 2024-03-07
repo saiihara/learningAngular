@@ -18,7 +18,8 @@
         <br>
         After filter: {{sayLovesMessage()}}
         <br>
-        Truth: {{sayLovesMessage() | truth : 'lemon' : 'strawberry'}}
+        Truth: {{sayLovesMessage() | truth : 'lemon' : 'strawberry'}} <br>
+        BIG TRUTH: {{sayLovesMessage() | truth : 'lemon' : 'strawberry' | uppercase}} <!-- chaining filters -->
         <br>
         <!-- <div> -->
             <!-- we want an image to be displayed that when we click the button it does something magic! -->

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="CounterApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-controller="CounterController">
+
+    <h1>$diggest and $apply</h1>
+    <h2>The digest cycle</h2>
+    <div>
+        <button ng-click="upCounter()">Increment Counter</button>
+    </div>
+    <div>
+        Regular counter: {{counter}}
+    </div>
+
+
+
+</body>
+</html>

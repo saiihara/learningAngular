@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="CounterApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+
+    <h1>Watchers</h1>
+
+    <div ng-controller="CounterAppController">
+        <button ng-click="showNumberOfWatchers()">Log # of watchers</button>
+     </div>
+     <div>
+         <button ng-click="countOnce()">Up once counter (once)</button>
+         <button ng-click="upCounter()">Up once counter</button>
+         <input type="text" ng-model="name">
+         
+
+         Once counter {{onceCounter}} <br>
+         Regular counter {{counter}} <br>
+     </div>
+
+</body>
+</html>
