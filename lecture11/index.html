@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="BindingApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-controller="BindingController">
+
+<h1>2 way, 1 way and 1 time binding</h1>
+<button ng-click="showNumberOfWatchers()">Show number of watchers</button> <br> <br>
+<button ng-click="setFullName()">Set full name</button> <br> <br>
+
+<!-- one time binding -->
+<!-- if we set the full name it wont display the full name since we dont have a watcher -->
+
+Full name is: {{::fullName}} <br>
+<button ng-click="logFirstName()">Log first name</button> <br> <br>
+<button ng-click="logFullName()">Log full name</button>  <br> <br>
+
+<!-- 2 way binding using ng model -->
+<div>
+    <input type="text" ng-model="firstName">
+</div>
+
+
+
+</body>
+</html>

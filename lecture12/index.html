@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ShoppingListApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+
+<h1>NG-REPEAT</h1>
+
+<div ng-controller="ShoppingListController">
+
+    <!-- shopping list 1 -->
+    <h3>Shopping list (normal loop):</h3>
+    <ul>
+        <!-- we'll loop through the array and each item is going to be equal to the item variable that we're setting up
+        we're interpolation that item as the value of the body of the li tag -->
+        <!-- this is like loop -->
+        <li ng-repeat="item in shoppingList1">{{item}}</li>
+    </ul>
+
+     <!-- ng-model sets up a watch!!!! -->
+    <!-- we just want to watch the first item's quantity -->
+    <!-- the item inside this will directly reflect and update -->
+    <input type="text" ng-model="shoppingList2[0].quantity">
+    
+    <h3>Shopping list (array of objects):</h3>
+    <!-- shopping list 2 -->
+    <!-- this will make a list like 1, 2, 3... -->
+    <!-- each item in the loop is gonna represent the object -->
+    <ul>
+        <li ng-repeat="item in shoppingList2">{{$index + 1}} . Buy {{item.quantity}} of {{item.name}}</li>
+    </ul>
+
+    <!-- shopping list 3 -->
+    <!-- we're setting watchers for different items in the object and it will update automactically-->
+   
+    <ul>
+        <li ng-repeat="item in shoppingList2">{{$index + 1}} Buy {{item.quantity}} of {{item.name}}</li>
+    </ul>
+
+    <input type="text" ng-model="newItemName" placeholder="item name">
+    <input type="text" ng-model="newItemQuantity" placeholder="item quantity">
+    <button ng-click="addToList()">Add to list</button>
+
+
+
+</div>
+
+
+</body>
+</html>
